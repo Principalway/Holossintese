@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Oráculo da Holossíntese</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f9; text-align: center; padding: 50px; }
+        h1 { color: #3a3a3a; }
+        button { padding: 10px 20px; font-size: 18px; background: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        #mensagem { margin-top: 30px; font-size: 22px; color: #333; min-height: 50px; }
+    </style>
+</head>
+<body>
+    <h1>Oráculo da Holossíntese</h1>
+    <p>Clique no botão para receber uma mensagem</p>
+    <button onclick="sortear()">Sortear Mensagem</button>
+    <div id="mensagem"></div>
+
+    <script>
+        const mensagens = [
+            "Confie no processo. Você está exatamente onde deveria estar.",
+            "A sombra revela o caminho para a luz interior.",
+            "A verdadeira cura começa com a escuta do silêncio.",
+            "Desapegue do controle: o fluxo da vida sabe o rumo.",
+            "A criatividade é o sopro divino que atravessa o humano.",
+            "O passado não define você, mas pode ser transformado em sabedoria.",
+            "Você é um fractal do Todo. O cosmos pulsa em você.",
+            "Sinta com o corpo, pense com o coração, aja com a alma.",
+            "Cada emoção é uma mensageira. Ouça antes de reagir.",
+            "A simplicidade é a linguagem do Ser essencial."
+        ];
+
+        function sortear() {
+            const indice = Math.floor(Math.random() * mensagens.length);
+            document.getElementById("mensagem").innerText = mensagens[indice];
+        }
+    </script>
+</body>
+</html>
